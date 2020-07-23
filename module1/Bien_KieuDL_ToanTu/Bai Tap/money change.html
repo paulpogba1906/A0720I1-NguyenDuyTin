@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>money change</title>
+</head>
+<body>
+<form method="post">
+    <table>
+        <tr>
+            <th style="width: 200px">Amount</th>
+            <th style="width: 200px">From Currency</th>
+            <th style="width: 200px">To Currency</th>
+            <th style="width: 200px"></th>
+        </tr>
+        <tr>
+            <td>
+                <input name="Amount" id="Amount" type="number">
+            </td>
+            <td align="center">
+                <select id="FromCurrency" style="width: 150px">
+                    <option value="VN">VietNam</option>
+                    <option value="American">USD</option>
+                </select>
+            </td>
+            <td align="center">
+                <select id="ToCurrency" style="width: 150px">
+                    <option value="VN">VietNam</option>
+                    <option value="American">USD</option>
+                </select>
+            </td>
+            <td>
+                <button name="Convert" type="button" onclick="change()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p id="result"></p>
+</form>
+<script>
+    function change() {
+        let FC = document.getElementById("FromCurrency").value;
+        let TC = document.getElementById("ToCurrency").value;
+        let Am = document.getElementById("Amount").value;
+        let Result=0;
+        if (FC === "American" && TC === "VN") {
+            Result = Am * 23000;
+        } else if (FC === "VN" && TC === "American") {
+            Result = Am / 23000;
+        } else if (FC === TC) {
+            Result = Am;
+        }
+            document.getElementById("result").innerText ="Result: "+ Result;
+    }
+</script>
+</body>
+</html>

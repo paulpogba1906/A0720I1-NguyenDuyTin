@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking information</title>
+    <link rel="stylesheet" href="AccountName.css">
+</head>
+<body>
+<h3 class="head3">THÔNG TIN ĐẶT PHÒNG</h3>
+<h3 class="head3">BOOKING INFORMATION</h3>
+<form method="post" id="GI">
+    <table align="center" class="cssTable" border="4px";>
+        <tr>
+            <td> Tên khách hàng/Guest name</td>
+            <td><input id="gname" type="text"></td>
+        </tr>
+        <tr>
+            <td> Số CMND/ID number</td>
+            <td><input id="IDn" type="number"></td>
+        </tr>
+        <tr>
+            <td> Ngày sinh/Date of birth</td>
+            <td><input id="birth" type="date" style="width: 159.5px"></td>
+        </tr>
+        <tr>
+            <td> Địa chỉ/Address</td>
+            <td><input id="address" type="text"></td>
+        </tr>
+        <tr>
+            <td> Hạng khách hàng/Customer Class</td>
+            <td>
+                <select id="rank" style="width: 164.5px">
+                    <option>Diamond</option>
+                    <option>Platinum</option>
+                    <option>Gold</option>
+                    <option>Silver</option>
+                    <option>Member</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> Giảm giá/Discount</td>
+            <td> 19%</td>
+        </tr>
+        <tr>
+            <td> Số lượng đi kèm/Quantity attached</td>
+            <td><input id="attach" type="number"></td>
+        </tr>
+        <tr>
+            <td> Số ngày thuê/Rentdays</td>
+            <td><input id="rentdays" type="number"></td>
+        </tr>
+        <tr>
+            <td> Loại dịch vụ/Services</td>
+            <td>
+                <select id="services" style="width: 164.5px">
+                    <option>Villa</option>
+                    <option>House</option>
+                    <option>Room</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> Loại phòng/Room type</td>
+            <td>
+                <select id="room" style="width: 164.5px">
+                    <option>Vip</option>
+                    <option>Business</option>
+                    <option>Normal</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" onclick="confirmation()" value="Submit"></input>
+                <input type="reset" value="Reset"></input></td>
+        </tr>
+    </table>
+</form>
+<p id="inra" align="center"></p>
+<script src="AccountName.js">
+</script>
+</body>
+</html>
