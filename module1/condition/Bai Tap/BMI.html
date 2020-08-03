@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI</title>
+</head>
+<body>
+<label>Nhập cân nặng của bạn (kg)</label>
+<label for="yourweight"></label><input type="text" id="yourweight">
+<label>Nhập chiều cao của bạn (m)</label>
+<label for="yourheight"></label><input type="text" id="yourheight">
+<input type="button" value="Xác Nhận" onclick="classifybmi()">
+<script>
+    let yourweight=document.getElementById('yourweight');
+    let yourheight=document.getElementById('yourheight');
+    let bmi;
+    function classifybmi() {
+        bmi=parseFloat(yourweight.value)/(parseFloat(yourheight.value)*parseFloat(yourheight.value));
+        document.write("Chỉ số BMI của bạn là: "+ bmi);
+        document.write("<br>");
+        document.write("Bạn thuộc nhóm: ");
+        if (bmi < 18)
+            document.write("Underweight");
+        else if (bmi < 25.0)
+            document.write("Normal");
+        else if (bmi < 30.0)
+            document.write("Overweight");
+        else
+            document.write("Obese");
+    }
+</script>
+</body>
+</html>

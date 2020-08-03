@@ -38,16 +38,16 @@
 </form>
 <script>
     function change() {
-        let FC = document.getElementById("FromCurrency").value;
-        let TC = document.getElementById("ToCurrency").value;
-        let Am = document.getElementById("Amount").value;
+        let FC = document.getElementById("FromCurrency");
+        let TC = document.getElementById("ToCurrency");
+        let Am = document.getElementById("Amount");
         let Result=0;
-        if (FC === "American" && TC === "VN") {
-            Result = Am * 23000;
-        } else if (FC === "VN" && TC === "American") {
-            Result = Am / 23000;
-        } else if (FC === TC) {
-            Result = Am;
+        if (FC.value === "American" && TC.value === "VN") {
+            Result = Am.value * 23000;
+        } else if (FC.value === "VN" && TC.value === "American") {
+            Result = Am.value / 23000;
+        } else if (FC.value === TC.value) {
+            Result = Am.value;
         }
             document.getElementById("result").innerText ="Result: "+ Result;
     }

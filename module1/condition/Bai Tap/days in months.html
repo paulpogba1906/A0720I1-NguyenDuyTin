@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>days in months</title>
+</head>
+<body>
+    <label for="month"></label><input id="month" type="number" value="1">
+    <input onclick="caculate()" type="button" value="Tính số ngày">
+    <p id="result"></p>
+<script>
+    let month=document.getElementById('month');
+    function caculate() {
+        switch(parseInt(month.value)){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: document.getElementById('result').innerText="Tháng "+ month.value +" có 31 ngày";
+            break;
+            case 2: document.getElementById('result').innerText="Tháng "+ month.value +" có 28 hoặc 29 ngày";
+            break;
+            case 4:
+            case 6:
+            case 9:
+            case 11: document.getElementById('result').innerText="Tháng "+ month.value +" có 30 ngày";
+            break;
+            default: document.getElementById('result').innerText="Bạn đã nhập không đúng vui lòng nhập lại";
+        }
+    }
+</script>
+</body>
+</html>
