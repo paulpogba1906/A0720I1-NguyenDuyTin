@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+​
+<body>
+<img src="Images/onepiece1a.jpg" id="onepieceA" onclick="onchangeImage(1)" width="250 px" height="600 px">
+<img src="Images/onepiece2b.jpg" id="onepieceB" onclick="onchangeImage(2)" width="250 px" height="600 px">
+<img src="Images/onepiece3c.jpg" id="onepieceC" onclick="onchangeImage(3)" width="250 px" height="600 px">
+<img src="Images/onepiece1d.jpg" id="onepieceD" onclick="onchangeImage(4)" width="250 px" height="600 px">
+<img src="Images/onepiece2e.jpg" id="onepieceE" onclick="onchangeImage(5)" width="250 px" height="600 px">
+</body>
+<script>
+    let onepieceA=document.getElementById("onepieceA");
+    let onepieceB=document.getElementById("onepieceB");
+    let onepieceC=document.getElementById("onepieceC");
+    let onepieceD=document.getElementById("onepieceD");
+    let onepieceE=document.getElementById("onepieceE");
+
+    function onchangeImage(number) {
+        switch (number) {
+            case 1 : {
+                if(onepieceA.getAttribute('src') ==="Images/onepiece1a.jpg") {
+                    onepieceA.src = "Images/onepiece2a.jpg";
+                } else if(onepieceA.getAttribute('src') ==="Images/onepiece2a.jpg") {
+                    onepieceA.src = "Images/onepiece3a.jpg";
+                }  else if(onepieceA.getAttribute('src') ==="Images/onepiece3a.jpg") {
+                    onepieceA.src = "Images/onepiece1a.jpg";
+                }
+                break;
+            }
+            case 2: {
+                if(onepieceB.getAttribute('src') ==="Images/onepiece1b.jpg") {
+                    onepieceB.src = "Images/onepiece2b.jpg";
+                } else if(onepieceB.getAttribute('src') ==="Images/onepiece2b.jpg") {
+                    onepieceB.src = "Images/onepiece3b.jpg";
+                }  else if(onepieceB.getAttribute('src') ==="Images/onepiece3b.jpg") {
+                    onepieceB.src = "Images/onepiece1b.jpg";
+                }
+                break;
+            }
+            case 3 : {
+                if(onepieceC.getAttribute('src') ==="Images/onepiece1c.jpg") {
+                    onepieceC.src = "Images/onepiece2c.jpg";
+                } else if(onepieceC.getAttribute('src') ==="Images/onepiece2c.jpg") {
+                    onepieceC.src = "Images/onepiece3c.jpg";
+                }  else if(onepieceC.getAttribute('src') ==="Images/onepiece3c.jpg") {
+                    onepieceC.src = "Images/onepiece1c.jpg";
+                }
+                break;
+            }
+            case 4 : {
+                if(onepieceD.getAttribute('src') ==="Images/onepiece1d.jpg") {
+                    onepieceD.src = "Images/onepiece2d.jpg";
+                } else if(onepieceD.getAttribute('src') ==="Images/onepiece2d.jpg") {
+                    onepieceD.src = "Images/onepiece3d.jpg";
+                }  else if(onepieceD.getAttribute('src') ==="Images/onepiece3d.jpg") {
+                    onepieceD.src = "Images/onepiece1d.jpg";
+                }
+                break;
+            }
+            case 5 : {
+                if(onepieceE.getAttribute('src') ==="Images/onepiece1e.jpg") {
+                    onepieceE.src = "Images/onepiece2e.jpg";
+                } else if(onepieceE.getAttribute('src') ==="Images/onepiece2e.jpg") {
+                    onepieceE.src = "Images/onepiece3e.jpg";
+                }  else if(onepieceE.getAttribute('src') ==="Images/onepiece3e.jpg") {
+                    onepieceE.src = "Images/onepiece1e.jpg";
+                }
+                break;
+            }
+        }
+        checkImage();
+    }
+    function checkImage() {
+        if(onepieceA.getAttribute('src') ==="Images/onepiece2a.jpg"
+            && onepieceB.getAttribute('src') ==="Images/onepiece2b.jpg"
+            && onepieceC.getAttribute('src') ==="Images/onepiece2c.jpg"
+            && onepieceD.getAttribute('src') ==="Images/onepiece2d.jpg"
+            && onepieceE.getAttribute('src') ==="Images/onepiece2e.jpg") {
+            alert("Bạn đã ghép đúng hình 2");
+        }
+        else if(onepieceA.getAttribute('src') ==="Images/onepiece3a.jpg"
+            && onepieceB.getAttribute('src') ==="Images/onepiece3b.jpg"
+            && onepieceC.getAttribute('src') ==="Images/onepiece3c.jpg"
+            && onepieceD.getAttribute('src') ==="Images/onepiece3d.jpg"
+            && onepieceE.getAttribute('src') ==="Images/onepiece3e.jpg") {
+            alert("Bạn đã ghép đúng hình 3");
+        }
+        else if(onepieceA.getAttribute('src') ==="Images/onepiece1a.jpg"
+            && onepieceB.getAttribute('src') ==="Images/onepiece1b.jpg"
+            && onepieceC.getAttribute('src') ==="Images/onepiece1c.jpg"
+            && onepieceD.getAttribute('src') ==="Images/onepiece1d.jpg"
+            && onepieceE.getAttribute('src') ==="Images/onepiece1e.jpg") {
+            alert("Bạn đã ghép đúng hình 1");
+        }
+    }
+</script>
+</html>

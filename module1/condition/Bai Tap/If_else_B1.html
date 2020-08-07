@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chia hết</title>
+</head>
+<body>
+    <label>Nhập số a: </label>
+    <input type="number" id="num_a">
+    <br>
+    <label>Nhập số b: </label>
+    <input type="number" id="num_b">
+    <br>
+    <input type="button" onclick="Tinh()" value="Tính">
+    <p id="result"></p>
+    <script>
+        let num_a=document.getElementById('num_a');
+        let num_b=document.getElementById('num_b');
+        function Tinh() {
+            if(num_a.value%num_b.value==0){
+                document.getElementById('result').innerText=num_a.value+" chia hết cho "+num_b.value;
+            }
+            else document.getElementById('result').innerText=num_a.value+" không chia hết cho "+num_b.value;
+        }
+    </script>
+</body>
+</html>

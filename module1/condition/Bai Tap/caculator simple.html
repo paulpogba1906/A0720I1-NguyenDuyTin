@@ -36,11 +36,19 @@
 </table>
 <script>
     let ketQua = document.getElementById("ketQua");
+    let temp="";
     function nhap(so) {
+        if(temp==="dấu bằng"){
+            if(so==='1'||so==='2'||so==='3'||so==='4'||so==='5'||so==='6'||so==='7'||so==='8'||so==='9'||so==='0'){
+                ketQua.value="";
+            }
+        }
+        temp="";
         ketQua.value = ketQua.value + so;
     }
     function tinhToan() {
         ketQua.value = eval(ketQua.value);
+        temp="dấu bằng";
     }
     function xoaGiaTri() {
         ketQua.value = "";

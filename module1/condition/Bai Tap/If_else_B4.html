@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số lớn nhất</title>
+</head>
+<body>
+<label>Nhập số thứ nhất: </label>
+<input type="number" id="num_a">
+<br>
+<label>Nhập số thứ hai: </label>
+<input type="number" id="num_b">
+<br>
+<label>Nhập số thứ ba: </label>
+<input type="number" id="num_c">
+<br>
+<input type="button" onclick="Tinh()" value="Kiểm tra">
+<p id="result"></p>
+<script>
+    let num_a=document.getElementById('num_a');
+    let num_b=document.getElementById('num_b');
+    let num_c=document.getElementById('num_c');
+    function Tinh() {
+        if(parseFloat(num_a.value)>=parseFloat(num_b.value)){
+            if(parseFloat(num_a.value)>=parseFloat(num_c.value)){
+                document.getElementById('result').innerText=num_a.value+" là số lớn nhất";
+            }
+            else document.getElementById('result').innerText=num_c.value+" là số lớn nhất";
+        }
+        else{
+            if(parseFloat(num_b.value)>=parseFloat(num_c.value)){
+                document.getElementById('result').innerText=num_b.value+" là số lớn nhất";
+            }
+            else document.getElementById('result').innerText=num_c.value+" là số lớn nhất";
+        }
+    }
+</script>
+</body>
+</html>
