@@ -2,9 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>The first prime number</title>
 </head>
 <body>
-$END$
+    <p id="result"></p>
+    <script>
+        let num=20;
+        let N=2,i;
+        let temp=0;
+        document.getElementById('result').innerText=num +" số nguyên tố đầu tiên là: ";
+        for(let count=0;count<num;){
+            for (i = 2; i<=parseFloat(Math.sqrt(N)); i++)
+            {
+                if (N%i===0)
+                {
+                    temp++;
+                }
+            }
+            if(temp===0){
+                document.getElementById('result').innerText+=N+",";
+                count++;
+            }
+            N++;
+            temp=0;
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let num=[];
+    let i;
+    num[0]=num[1]=1;
+    document.getElementById("result").innerText="Số đầu tiên trong dãy fibonacci chia hết cho 5 là: "
+    for(i=2;i<20;i++){
+        num[i]=num[i-1]+num[i-2];
+        if(num[i]%5===0){
+            document.getElementById("result").innerText+=num[i];
+            break;
+        }
+    }
+</script>
+</body>
+</html>

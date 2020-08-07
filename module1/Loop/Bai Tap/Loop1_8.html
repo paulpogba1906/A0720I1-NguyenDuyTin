@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Chơi" onclick="Play()">
+<input type="button" value="Chơi lại" onclick="Playagain()">
+<p id="result"></p>
+<script>
+    let temp=parseInt(Math.random()*101);
+    let num,count=0;
+    function Play() {
+        do{
+            num=prompt("Nhập số mà bạn cho là đúng: (từ 0 đến 100)");
+            if(parseInt(num)===temp){
+                alert("Chúc mừng bạn đã chiến thắng trò chơi");
+            }
+            else if(parseInt(num)>temp){
+                count++;
+                alert("Bạn đã nhập lớn hơn cần giảm xuống");
+            }
+            else{
+                alert("Bạn đã nhập bé hơn cần tăng lên");
+                count++;
+            if(count===3) alert("Thua rồi, bạn có muốn thử lại?");
+            }
+        }
+        while(parseInt(num)!==temp && count<3)
+    }
+    function Playagain() {
+        temp=parseInt(Math.random()*101);
+        count=0;
+        Play();
+    }
+</script>
+</body>
+</html>

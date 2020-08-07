@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+    <script>
+        let num = prompt("Enter a number: ");
+        alert("bạn vừa nhập số: "+num);
+        let total = 0;
+        while( num != -1 ) {
+            num = parseInt(prompt("Enter a number: "));
+            alert("bạn vừa nhập số: "+num);
+            //phần code tính tổng
+            total += num;
+        }
+        alert("Tổng các số bạn đã nhập: "+total);
+    </script>
 </body>
 </html>

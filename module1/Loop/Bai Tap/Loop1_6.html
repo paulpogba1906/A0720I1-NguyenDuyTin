@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let count=0,num=0,sum=0;
+    document.getElementById("result").innerText="Tổng 30 số tự nhiên đầu tiên chia hết cho 7 là: ";
+    for(count;count<30;){
+        if(num%7===0){
+            sum+=num;
+            count++;
+        }
+        num++;
+    }
+    document.getElementById("result").innerText+=" " +sum;
+</script>
+</body>
+</html>

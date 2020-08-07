@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        let num=[];
+        let i;
+        num[0]=num[1]=1;
+        document.getElementById("result").innerText="20 số đầu tiên trong dãy fibonacci là: "
+        for(i=2;i<20;i++){
+            num[i]=num[i-1]+num[i-2];
+        }
+        for(i=0;i<20;i++){
+            document.getElementById("result").innerText+=num[i] +",";
+        }
+    </script>
+</body>
+</html>
