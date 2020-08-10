@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let i,temp=1;
+    let num=parseInt(prompt("Nhập vào 1 số nguyên dương"));
+    document.getElementById("result").innerText=num+"! =";
+    for(i=num;i>1;i--){
+        temp*=i;
+    }
+    document.getElementById("result").innerText+=" "+temp;
+</script>
+</body>
+</html>

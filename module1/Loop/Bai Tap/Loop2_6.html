@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let i,j,k=-2,leng=10,hei=(leng/2-3)+6;
+    for (i=0;i<hei;i++){
+        for(j=0;j<=leng;j++){
+            if((i===0&&(j===0||j===leng/2||j===leng))
+            ||(i>2&&i<hei&&(j<k||j>leng-k))){
+                document.getElementById('result').innerHTML+="_"+" ";
+            }
+            else document.getElementById('result').innerHTML+="*"+" ";
+        }
+        k++;
+        document.getElementById('result').innerHTML+="<br>";
+    }
+</script>
+</body>
+</html>

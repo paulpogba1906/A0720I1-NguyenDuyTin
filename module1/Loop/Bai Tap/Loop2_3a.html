@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let i,j;
+    // vuông cân góc trái dưới
+    for(i=0;i<=5;i++){
+        for(j=0;j<i;j++){
+            document.getElementById('result').innerHTML+="*"+" ";
+        }
+        document.getElementById('result').innerHTML+="<br>";
+    }
+    document.getElementById('result').innerHTML+="<br>";
+    // vuông cân góc trái trên
+    for(i=5;i>=0;i--){
+        for(j=i;j>0;j--){
+            document.getElementById('result').innerHTML+="*"+" ";
+        }
+        document.getElementById('result').innerHTML+="<br>";
+    }
+    document.getElementById('result').innerHTML+="<br>";
+    // vuông cân góc phải trên
+    for(i=0;i<5;i++){
+        for(j=0;j<5;j++){
+            if(j<i){
+                document.getElementById('result').innerHTML+="_"+" ";
+            }
+            else{
+                document.getElementById('result').innerHTML+="*"+" ";
+            }
+        }
+        document.getElementById('result').innerHTML+="<br>";
+    }
+    document.getElementById('result').innerHTML+="<br>";
+    // vuông cân góc phải dưới
+    for(i=5;i>0;i--){
+        for(j=1;j<=5;j++){
+            if(j>=i){
+                document.getElementById('result').innerHTML+="*"+" ";
+            }
+            else{
+                document.getElementById('result').innerHTML+="_"+" ";
+            }
+        }
+        document.getElementById('result').innerHTML+="<br>";
+    }
+    document.getElementById('result').innerHTML+="<br>";
+</script>
+</body>
+</html>
