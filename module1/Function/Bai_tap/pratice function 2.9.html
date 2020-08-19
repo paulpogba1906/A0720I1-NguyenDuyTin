@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=['a','b','c','d','e','f','a','d','a','t','u','p','a','b'];
+    let inp=prompt("Nhập vào kí tự mà bạn muốn tìm");
+    let count=0;
+    function find_in_array(inp) {
+        for(let i=0;i<arr.length;i++){
+            if(inp===arr[i]){
+                count++;
+            }
+        }
+        if(count===0){
+            return -1;
+        }
+        else return count;
+    }
+    alert("Có "+find_in_array(inp)+" kí tự "+inp);
+</script>
+</body>
+</html>
