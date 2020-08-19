@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let num1=parseInt(prompt("Nhap so thu nhat"));
+    let num2=parseInt(prompt("Nhap so thu hai"));
+    alert("truoc khi hoan doi: "+num1+" "+num2);
+    swap();
+    alert("sau khi hoan doi: "+num1+" "+num2);
+    function swap(){
+        let temp=num1;
+        num1=num2;
+        num2=temp;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function factorial(number) {
+        if(number===1) return 1;
+        return factorial(number-1)*number;
+    }
+    let num=parseInt(prompt("Nhap so ban muon tinh giai thua"));
+    alert(factorial(num));
+</script>
+</body>
+</html>

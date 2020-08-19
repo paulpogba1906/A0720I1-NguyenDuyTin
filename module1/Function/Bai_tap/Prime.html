@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prime</title>
+</head>
+<body>
+<script>
+    function isPrime(number){
+
+            for (let i = 2; i<=parseFloat(Math.sqrt(number)); i++)
+            {
+                if (number%i===0)
+                {
+                    return false;
+                }
+            }
+            return true;
+    }
+    let num=parseInt(prompt());
+    if(isPrime(num)) alert("so nguyen to");
+    function PrintPrime(number) {
+        for(let i=2;i<number;i++){
+            if(isPrime(i)) document.writeln(i);
+        }
+    }
+    PrintPrime(10000);
+</script>
+</body>
+</html>
